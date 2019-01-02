@@ -448,7 +448,7 @@ Gframe.backbone.models.bootStatus = Backbone.Model.extend({
 				'id': 'free_games',
 				'el': '#free_games .segment_display.active',
 				// 'template': 'TEST    PLAY FREE GAMES TO EARN CREDITS. ... GET <%= free_credit_awards %> FREE GAMES EVERY <%= free_credit_awards_time %>. KEEP UP TO <%= max_free_credit_awards %> FREE GAMES AT A TIME.',
-				'template': "FREE GAMES!",
+				'template': "Tu Hi Nirankar",
 				'register': 'free_games_settings',
 				'clockSettings': {
 					'loop': -1,
@@ -689,17 +689,17 @@ $(function() {
 	var _soundTest_index = 0;
 	var _currentStep = 0;
 
-	$('#spin_reels').click(function(){
+	$('[id^=spin_reels]').click(function(){
 		Backbone.mediator.trigger( 'spinTheReel' );
 		return false;
-		var _sound_num = Gframe.preloadManifest.length - 1;
-		if(_soundTest_index > _sound_num) _soundTest_index = 0;
-		Gframe.memory.mov({
-			id: 'sound_code',
-			value: Gframe.preloadManifest[_soundTest_index].id});
-		Backbone.mediator.trigger( 'stopSound' );
-		Backbone.mediator.trigger( 'playSound' , Gframe.preloadManifest[_soundTest_index].id );
-		_soundTest_index = _soundTest_index+ 1;
+		// var _sound_num = Gframe.preloadManifest.length - 1;
+		// if(_soundTest_index > _sound_num) _soundTest_index = 0;
+		// Gframe.memory.mov({
+		// 	id: 'sound_code',
+		// 	value: Gframe.preloadManifest[_soundTest_index].id});
+		// Backbone.mediator.trigger( 'stopSound' );
+		// Backbone.mediator.trigger( 'playSound' , Gframe.preloadManifest[_soundTest_index].id );
+		// _soundTest_index = _soundTest_index+ 1;
 	});
 
 	$('#bet_one').click(function(){
@@ -1222,7 +1222,7 @@ Gframe.backbone.views.reels = Backbone.View.extend({
 
 		Gframe.memory.mov({
 			id: 'winner_paid',
-			value: 'GOODLUCK',
+			value: 'Dhan Nirankar',
 		});
 		$('#reel-1').stop().animate({
 				'margin-top': '+=160px'
